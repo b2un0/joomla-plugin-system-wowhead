@@ -32,4 +32,7 @@
             </fieldset>
         </fields>
     </config>
+    <updateservers>
+		<server type="extension" priority="1" name="Wowhead">http://www.z-index.net/en/joomla/wowhead/updatestream.xml</server>
+	</updateservers>
 </extension>
