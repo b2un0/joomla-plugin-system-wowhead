@@ -11,7 +11,6 @@
  * @version    $Id$
  */
  
-// no direct access
 defined('_JEXEC') or die;
 
 class plgSystemWowhead extends JPlugin {
