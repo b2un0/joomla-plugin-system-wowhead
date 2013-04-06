@@ -14,12 +14,18 @@
 defined('_JEXEC') or die;
 
 class plgSystemWowhead extends JPlugin {
-
+	
 	public function onBeforeRender() {
+		if (JFactory::getApplication()->isAdmin()) {
+			return;
+		}
+		
 		JFactory::getDocument()->addScript('//static.wowhead.com/widgets/power.js');
-		$json['colorlinks'] = $this->params->get('colorlinks') ? true : false;
-		$json['iconizelinks'] = $this->params->get('iconizelinks') ? true : false;
-		$json['renamelinks'] = $this->params->get('renamelinks') ? true : false;
-		JFactory::getDocument()->addScriptDeclaration('var wowhead_tooltips = ' . json_encode($json));
+				
+		$config['colorlinks'] = $this->params->get('colorlinks') ? true : false;
+		$config['iconizelinks'] = $this->params->get('iconizelinks') ? true : false;
+		$config['renamelinks'] = $this->params->get('renamelinks') ? true : false;
+		
+		JFactory::getDocument()->addScriptDeclaration('var wowhead_tooltips = ' . json_encode($config));
     }
 }
