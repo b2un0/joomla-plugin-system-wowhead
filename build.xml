@@ -3,7 +3,7 @@
 	
 	<exec command="git rev-list --count HEAD" dir="." outputProperty="revision" />
 	
-	<property name="zip" value="/var/www/_svn/${phing.project.name}.rev.${revision}.zip" />
+	<property name="zip" value="/var/www/_deployment/${phing.project.name}.rev.${revision}.zip" />
 
 	<fileset dir="." id="allfiles">
 		<include name="**" />
