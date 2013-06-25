@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="plg_wowhead" basedir="." default="build">
 	
-	<svnlastrevision workingcopy="." propertyname="revision" />
+	<exec command="git rev-list --count HEAD" dir="." outputProperty="revision" />
 	
 	<property name="zip" value="/var/www/_svn/${phing.project.name}.rev.${revision}.zip" />
 
@@ -26,7 +26,7 @@
 			<fileset refid="allfiles" />
 			<filterchain>
 				<replacetokens>
-					<token key="SVN_REVISION" value="rev ${revision}" />
+					<token key="REVISION" value="rev ${revision}" />
 				</replacetokens>
 			</filterchain>
 		</copy>
