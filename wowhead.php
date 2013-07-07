@@ -22,6 +22,6 @@ class plgSystemWowhead extends JPlugin {
 		$config['iconizelinks'] = $this->params->get('iconizelinks') ? true : false;
 		$config['renamelinks'] = $this->params->get('renamelinks') ? true : false;
 		
-		JFactory::getDocument()->addScriptDeclaration('var wowhead_tooltips = ' . json_encode($config));
+		JFactory::getDocument()->addScriptDeclaration('var wowhead_tooltips=' . json_encode($config));
     }
 }
