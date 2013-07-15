@@ -16,7 +16,7 @@ class plgSystemWowhead extends JPlugin {
 			return;
 		}
 		
-		JFactory::getDocument()->addScript('//static.wowhead.com/widgets/power.js');
+		JFactory::getDocument()->addScript('//static.wowhead.com/widgets/power.js', 'text/javascript', false, true);
 				
 		$config['colorlinks'] = $this->params->get('colorlinks') ? true : false;
 		$config['iconizelinks'] = $this->params->get('iconizelinks') ? true : false;
