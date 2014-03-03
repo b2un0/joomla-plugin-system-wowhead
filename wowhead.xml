@@ -8,7 +8,7 @@
     <authorEmail>branko.wilhelm@gmail.com</authorEmail>
     <authorUrl>www.z-index.net</authorUrl>
     <version>@REVISION@</version>
-    <description>include wowhead Javascript</description>
+    <description>include wowhead javascript for link tooltips</description>
     <files>
         <filename plugin="wowhead">wowhead.php</filename>
     </files>
